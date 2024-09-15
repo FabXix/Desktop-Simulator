@@ -14,7 +14,7 @@ def music():
     print("Your Playlist")
     songs = [{"name": "Data", "artist": "Tainy", "duration": 5},
              {"name": "Vida Rockstar", "artist": "Jhayco", "duration": 7},
-             {"name": "wave", "artist": "", "wave to earth": 12}]
+             {"name": "wave", "artist": "wave to earth", "duration": 12}]
     queue = []
     current_index = 0
 
