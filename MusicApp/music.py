@@ -1,5 +1,8 @@
 import time
 from colorama import Fore, Style
+import json
+import os
+
 
 def help():
     print("[help]/[h] Gives a list of commands.")
@@ -154,12 +157,19 @@ def display_progress(duration, elapsed):
     bar = ('|' * (progress // 5)).ljust(20)
     print(f"▶︎ •{bar} {progress}%")
 
+
+
+
 def music():
-    print("Your Library:")
-    #All songs durations are reduced to showcase the code.
-    songs = [{"name": "MOJABI GHOST", "artist": "Tainy & Bad Bunny", "duration": 5},
-             {"name": "Vida Rockstar", "artist": "Jhayco", "duration": 7},
-             {"name": "Next Semester", "artist": "Twenty One Pilots", "duration": 12}]
+    print("Music.py Library:")
+    current_directory = current_directory = os.path.dirname(__file__)
+    songlist_path = os.path.join(current_directory, 'songlist.json')
+    try:
+        with open(songlist_path, 'r') as file:
+            songs = json.load(file)
+    except FileNotFoundError:
+        print("Error: songlist.json not found.")
+        return
     cola = Queue()
     playlist_manager = PlaylistManager()
     current_index = 0

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Bohemian Rhapsody",
+        "artist": "Queen",
+        "duration": 3
+    },
+    {
+        "name": "Imagine",
+        "artist": "John Lennon",
+        "duration": 8
+    },
+    {
+        "name": "Hotel California",
+        "artist": "Eagles",
+        "duration": 9
+    },
+    {
+        "name": "Stairway to Heaven",
+        "artist": "Led Zeppelin",
+        "duration": 8
+    },
+    {
+        "name": "Hey Jude",
+        "artist": "The Beatles",
+        "duration": 4
+    },
+    {
+        "name": "Smells Like Teen Spirit",
+        "artist": "Nirvana",
+        "duration": 5
+    }
+]
