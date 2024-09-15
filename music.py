@@ -16,7 +16,7 @@ def help():
     print("[add] Adds a song to the playlist selected while in the playlist menu.")
     print("[remove]/[r] Removes a song to the playlist selected while in the playlist menu.")
     print("[exit] Exits Music.py. ")
-    time.sleep(2)
+    time.sleep(2.1)
 
 
 class Node:
