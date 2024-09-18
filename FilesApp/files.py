@@ -1,5 +1,6 @@
 from colorama import Fore, Style
 import time
+import copy
 
 class TreeNode:
     def __init__(self, name, is_folder=False):
@@ -87,6 +88,7 @@ def clear_screen():
 def file_explorer(root):
     current_node = root
     current_index = 0
+    copy_node = None
 
     while True:
         print(f"Current Directory: {current_node.name}")
@@ -139,6 +141,14 @@ def file_explorer(root):
         elif command == "write":
             clear_screen()
             current_node.modify_content()
+        elif command == "copy":
+            clear_screen()
+            if current_node.is_folder and len(current_node.children) > 0:
+                copy_node = copy.deepcopy(current_node.children[current_index])
+        elif command == "paste":
+            clear_screen()
+            if copy_node is not None:
+                current_node.add_child(copy_node)
         elif command == "append":
             clear_screen()
             current_node.append_content()
